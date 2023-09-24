@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-neutral-800 break-words antialiased;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  word-wrap: break-word;
+}
+
+h1 {
+  @apply font-bold text-3xl md:text-5xl tracking-tight text-white;
+}
+
+h2 {
+  @apply font-bold text-2xl tracking-tight;
+}
+
+p {
+  @apply text-gray-300;
+}
+
+a {
+  @apply text-neon-green;
+}
+
+img[alt=cat-in-a-server-room], 
+img[alt=programmer-with-chrome] {
+  @apply h-[350px] mx-auto md:h-[600px];
+}
+
+img[alt=first-option-to-copy-response-gif],
+img[alt=second-option-to-copy-response-gif]{
+  @apply mx-auto;
+}
+
+[astro-icon]{
+  @apply w-8;
+}
+
+pre {
+  @apply rounded p-4 text-sm;
+}
