@@ -5,7 +5,8 @@ dist/
 # dependencies
 node_modules/
 
-.vscode
+.vscode/
+.vercel
 
 # logs
 npm-debug.log*
