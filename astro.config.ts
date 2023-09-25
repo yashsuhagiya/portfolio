@@ -12,7 +12,7 @@ export default defineConfig({
     shikiConfig: {
       // Choose from Shiki's built-in themes (or add your own)
       // https://github.com/shikijs/shiki/blob/main/docs/themes.md
-      theme: 'dark-plus',
+      theme: "light-plus",
       // Add custom languages
       // Note: Shiki has countless langs built-in, including .astro!
       // https://github.com/shikijs/shiki/blob/main/docs/languages.md
@@ -21,14 +21,19 @@ export default defineConfig({
       wrap: true,
     },
     remarkPlugins: [remarkReadingTime],
-    syntaxHighlight: 'shiki'
+    syntaxHighlight: "shiki",
   },
-  integrations: [tailwind({
-    applyBaseStyles: false,
-  }), mdx(), sitemap(), prefetch()],
+  integrations: [
+    tailwind({
+      applyBaseStyles: false,
+    }),
+    mdx(),
+    sitemap(),
+    prefetch(),
+  ],
   site: "https://www.paulvall.dev/",
-  output: 'hybrid',
+  output: "hybrid",
   adapter: vercel({
     edgeMiddleware: true,
-  })
+  }),
 });

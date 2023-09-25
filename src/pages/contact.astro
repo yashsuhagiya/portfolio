@@ -3,7 +3,7 @@ import Layout from "@layouts/Layout.astro";
 import { Icon } from "astro-icon";
 ---
 
-<Layout title="Paul Valladares | Contact">
+<Layout title="Yash Suhagiya | Contact">
   <main class="flex flex-col items-center">
     <h1>Contact</h1>
     <div
@@ -12,8 +12,8 @@ import { Icon } from "astro-icon";
     >
       <form
         id="contact-form"
-        class="flex flex-col rounded-lg w-[320px] md:w-[750px] p-10 gap-4 bg-zinc-900 text-white [&_input]:block [&_input]:bg-zinc-800 max-sm:[&_input]:w-full [&_textarea]:block [&_textarea]:bg-zinc-800 [&_select]:block [&_select]:bg-zinc-800 [&_select]:text-white"
-        action="https://getform.io/f/0317a7a6-6baa-4a9e-98c3-7717e70bce41"
+        class="pageclip-form flex flex-col rounded-lg w-[320px] md:w-[750px] p-20 gap-4 bg-zinc-900 text-white [&_input]:block [&_input]:bg-zinc-800 max-sm:[&_input]:w-full [&_textarea]:block [&_textarea]:bg-zinc-800 [&_select]:block [&_select]:bg-zinc-800 [&_select]:text-white"
+        action="https://send.pageclip.co/KDvPdAOPWNM5s6YWluybwPW8vNVkkDQ7/contact-form"
         method="POST"
       >
         <label for="name" class="font-semibold">Name</label>
@@ -22,7 +22,7 @@ import { Icon } from "astro-icon";
           id="name"
           name="name"
           placeholder="Jane Doe"
-          class="rounded-sm p-2"
+          class="rounded-sm p-5"
           required
         />
         <label for="email" class="font-semibold">Email</label>
@@ -31,11 +31,11 @@ import { Icon } from "astro-icon";
           id="email"
           name="email"
           placeholder="jane.doe@example.com"
-          class="rounded-sm p-2"
+          class="rounded-sm p-5"
           required
         />
         <label for="subject" class="font-semibold">Subject</label>
-        <select id="subject" name="subject" class="rounded-sm p-2" required>
+        <select id="subject" name="subject" class="rounded-sm p-5 appearance-none" required>
           <option value="General">General</option>
           <option value="Freelance Work">Freelance Work</option>
           <option value="Collaboration">Collaboration</option>
@@ -47,16 +47,21 @@ import { Icon } from "astro-icon";
           id="message"
           name="message"
           placeholder="Hello, I am Jane Doe..."
-          class="h-48 rounded-sm p-2 resize-none"
+          class="h-48 rounded-sm p-5 resize-none"
           required></textarea>
         <button
           type="submit"
-          class="flex self-center items-center gap-1 w-fit px-4 py-2 rounded-lg text-white font-semibold bg-gray-400 backdrop-blur-lg bg-opacity-10 mt-4 hover:scale-105 hover:transition-transform hover:duration-300"
+          class="pageclip-form__submit flex self-center items-center gap-1 w-fit px-4 py-2 rounded-lg text-white font-semibold bg-gray-400 backdrop-blur-lg bg-opacity-10 mt-4 hover:scale-105 hover:transition-transform hover:duration-300"
         >
           <Icon name="ic:baseline-send" class="h-4" />
            Send
         </button>
+        <div class="form-message">
+                                        <span class="output_message text-center font-weight-600 uppercase"></span>
+                                    </div>
       </form>
     </div>
   </main>
 </Layout>
+
+<script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>

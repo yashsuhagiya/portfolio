@@ -22,20 +22,20 @@ p {
 }
 
 a {
-  @apply text-neon-green;
+  @apply text-blue-300;
 }
 
-img[alt=cat-in-a-server-room], 
-img[alt=programmer-with-chrome] {
+img[alt="cat-in-a-server-room"],
+img[alt="programmer-with-chrome"] {
   @apply h-[350px] mx-auto md:h-[600px];
 }
 
-img[alt=first-option-to-copy-response-gif],
-img[alt=second-option-to-copy-response-gif]{
+img[alt="first-option-to-copy-response-gif"],
+img[alt="second-option-to-copy-response-gif"] {
   @apply mx-auto;
 }
 
-[astro-icon]{
+[astro-icon] {
   @apply w-8;
 }
 

@@ -26,7 +26,7 @@ const { title, description, date, link, readingTime } =
 
   <div class="flex items-center gap-x-4 text-neutral-200 text-xs md:text-sm">
     <div class="flex items-center gap-x-2">
-      <Icon name="system-uicons:calendar-month" class="text-neon-green" />
+      <Icon name="system-uicons:calendar-month" class="text-blue-300" />
       <time datetime={date}>
         {
           new Date(date).toLocaleDateString("en-us", {
@@ -38,7 +38,7 @@ const { title, description, date, link, readingTime } =
       </time>
     </div>
     <div class="flex items-center gap-x-2">
-      <Icon name="ic:baseline-schedule" class="text-neon-green" />
+      <Icon name="ic:baseline-schedule" class="text-blue-300" />
       <p>{readingTime}</p>
     </div>
   </div>

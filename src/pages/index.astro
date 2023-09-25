@@ -25,43 +25,42 @@ type PinnedRepos = {
 };
 
 const pinnedRepos = await fetch(
-  "https://gh-pinned-repos.egoist.dev/?username=dreyfus92"
+  "https://gh-pinned-repos.egoist.dev/?username=yashsuhagiya"
 );
 const repos = await pinnedRepos.json();
 ---
 
-<Layout title="Paul Valladares | Home">
+<Layout title="Yash Suhagiya | Home">
   <main>
     <div class="flex flex-col-reverse md:flex-row justify-center items-center">
       <div class="text-white w-[350px] md:w-[450px]">
         <h1 class="font-bold text-3xl md:text-5xl tracking-tight mb-1 glitch">
-          Paul Valladares
+          Yash Suhagiya
         </h1>
         <h2 class="text-lg mt-2 glitch">
-          Frontend Dev seeking a new coding journey!
+          Fullstack Dev seeking a new coding journey!
         </h2>
         <h2 class="text-lg glitch">
-          prev
+          
           <a
-            href="https://www.hackapulco.com"
+            href="https://yashsuhagiya.me"
             target="_blank"
             class="rounded-lg hover:bg-neon-green hover:text-gray-900 p-1"
-            >@Hackapulco</a
+            >@YashSuhagiya</a
           >
         </h2>
         <p class="mt-4 text-left">
-          Welcome to my little corner of the web! I am a civil engineer
-          graduated from National Autonomous University of Mexico (UNAM) who
-          decided to break into tech in his late 20s. I am interested in <strong
-            >web developement</strong
-          >, <strong>UI/UX design</strong> and <strong>data analysis.</strong>
+          Welcome to my little corner of the web! I am a master student at 
+          TU Dresden and a software engineer. 
+          I am interested in <strong>software developement</strong
+          >, <strong>blog writing</strong> and <strong>DevOps.</strong>
         </p>
       </div>
       <img
         id="pfp-1"
         class="mb-10 md:mb-0 h-[120px] w-[120px] md:h-[240px] md:w-[240px] rounded-full ml-0 md:ml-10"
-        src="https://avatars.githubusercontent.com/u/85648028?v=4"
-        alt="Paul Valladares"
+        src="https://media.licdn.com/dms/image/D4E03AQHauIW2FlptdA/profile-displayphoto-shrink_800_800/0/1691783779116?e=1701302400&v=beta&t=kVgl89CQIg9Bf3WuukBl_NZNpcEjxKvMDPx9A-_0lak"
+        alt="Yash Suhagiya"
       />
     </div>
     <div class="flex justify-center items-center my-10 md:my-16">
@@ -91,24 +90,8 @@ const repos = await pinnedRepos.json();
     </div>
     <div class="flex justify-center items-center my-10 md:my-16">
       <div class="text-white w-[350px] md:w-[740px]">
-        <h2 class="text-3xl font-bold">Projects</h2>
+        <h2 class="text-3xl font-bold">Projects / Assignments</h2>
         <p class="mt-4 text-left">
-          I've build a couple of projects in the past and since Hacktoberfest I
-          started enjoying to contribute to Open Source, currently I'm
-          contributing to <a
-            href="https://astro.build/"
-            aria-label="Documentation for Astro"
-            target="_blank"
-            class="rounded-lg hover:bg-neon-green hover:text-gray-900 p-1"
-            ><strong>Astro Docs</strong>
-          </a>
-           and <a
-            href="https://starlight.astro.build/"
-            target="_blank"
-            aria-label="Documentation for Starlight"
-            class="rounded-lg hover:bg-neon-green hover:text-gray-900 p-1"
-            ><strong>Starlight.</strong></a
-          >
         </p>
         <div
           class="grid grid-cols-1 gap-y-5 md:grid-cols-2 md:gap-y-8 md:gap-x-4 mt-10"
