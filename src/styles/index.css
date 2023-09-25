@@ -22,7 +22,7 @@ p {
 }
 
 a {
-  @apply text-blue-300;
+  @apply text-secondary;
 }
 
 img[alt="cat-in-a-server-room"],

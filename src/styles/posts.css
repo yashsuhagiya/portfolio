@@ -3,7 +3,7 @@
 }
 
 .post code {
-  @apply rounded-sm bg-neutral-800 px-1 py-[2px] text-blue-300;
+  @apply rounded-sm bg-neutral-800 px-1 py-[2px] text-secondary;
 }
 
 .post h2 {
@@ -15,11 +15,11 @@
 }
 
 .post a {
-  @apply text-blue-300;
+  @apply text-secondary;
 }
 
 .post code {
-  @apply rounded-sm bg-neutral-800 px-1 py-[2px] text-blue-300;
+  @apply rounded-sm bg-neutral-800 px-1 py-[2px] text-secondary;
 }
 
 .post ul {
