@@ -2,7 +2,7 @@
 
 An attempt to create a miniminal js personal blog using [Astro](https://astro.build/).
 
-![screenshot](/public/sc1.png)
+![screenshot](/public/sc2.jpeg)
 
 ## 📚 Stack
 
@@ -63,7 +63,3 @@ npm install -g pnpm
 pnpm i
 pnpm dev
 ```
-
-## 📝 License
-
-This project is licensed under the [MIT license](/LICENSE).
