@@ -1,4 +1,3 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
@@ -6,11 +5,13 @@ module.exports = {
       colors: {
         'neon-green': '#ffc3a0',
         'primary': '#ffafbd',
-        'secondary': '#ffc3a0'
+        'secondary': '#ffc3a0',
+        'white': '#ffffff', // Add a light background color
+        'black': '#000000', // Add a light text color
       },
       backgroundImage: {
         'blue-green-gradient': 'linear-gradient(247.23deg, #ffafbd 0%, #ffc3a0 100%)',
-      }
+      },
     },
   },
   plugins: [],
