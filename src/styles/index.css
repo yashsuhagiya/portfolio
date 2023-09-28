@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 body {
-  @apply bg-neutral-800 break-words antialiased;
+   /* Set the light background color */
+  background-color: var(--colors-white);
+
+  /* Set the light text color */
+  color: var(--colors-black);
   text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
   word-wrap: break-word;
