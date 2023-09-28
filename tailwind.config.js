@@ -6,8 +6,6 @@ module.exports = {
         'neon-green': '#ffc3a0',
         'primary': '#ffafbd',
         'secondary': '#ffc3a0',
-        'white': '#ffffff', // Add a light background color
-        'black': '#000000', // Add a light text color
       },
       backgroundImage: {
         'blue-green-gradient': 'linear-gradient(247.23deg, #ffafbd 0%, #ffc3a0 100%)',

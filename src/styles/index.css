@@ -3,11 +3,7 @@
 @tailwind utilities;
 
 body {
-   /* Set the light background color */
-  background-color: var(--colors-white);
-
-  /* Set the light text color */
-  color: var(--colors-black);
+  @apply bg-neutral-800 break-words antialiased;
   text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
   word-wrap: break-word;
@@ -22,7 +18,7 @@ h2 {
 }
 
 p {
-  @apply text-black;
+  @apply text-gray-300;
 }
 
 a {
