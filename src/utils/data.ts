@@ -60,6 +60,13 @@ const technologies = [
     link: "https://nextjs.org/",
     ariaLink: "Next.js Documentation Website",
   },
+  {
+    name: "Planetscale",
+    imgSrc: "https://avatars.githubusercontent.com/u/35612527?s=280&v=4",
+    altSrc: "Planetscale Logo",
+    link: "https://planetscale.com/",
+    ariaLink: "Planetscale Documentation Website",
+  },
 ];
 
 const socials = [
