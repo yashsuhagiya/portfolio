@@ -13,13 +13,13 @@ type TechBadgeProps = {
 };
 
 type PinnedRepos = {
-  owner: string;
+  name: string;
   repo: string;
-  link: string;
   description: string;
-  image: string;
-  language: string;
-  languageColor: string;
+  language: {
+    name: string;
+    color: string;
+  }
   stars: number;
   forks: number;
 };
