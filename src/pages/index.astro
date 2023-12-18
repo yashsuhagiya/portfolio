@@ -27,7 +27,8 @@ type PinnedRepos = {
 const pinnedRepos = await fetch(
   "https://gh-pinned-repos-api.ysnirix.xyz/api/get/?username=yashsuhagiya"
 );
-const repos = await pinnedRepos.json();
+const data = await pinnedRepos.json();
+const repos = data.response;
 ---
 
 <Layout title="Yash Suhagiya | Home">
