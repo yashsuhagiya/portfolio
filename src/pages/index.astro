@@ -25,7 +25,7 @@ type PinnedRepos = {
 };
 
 const pinnedRepos = await fetch(
-  "https://gh-pinned-repos.egoist.dev/?username=yashsuhagiya"
+  "https://gh-pinned-repos-api.ysnirix.xyz/api/get/?username=yashsuhagiya"
 );
 const repos = await pinnedRepos.json();
 ---
