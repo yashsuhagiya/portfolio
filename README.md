@@ -2,8 +2,6 @@
 
 An attempt to create a miniminal js personal blog using [Astro](https://astro.build/).
 
-![screenshot](/public/sc2.jpeg)
-
 ## 📚 Stack
 
 - Platform: [Astro](https://astro.build/)
