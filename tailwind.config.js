@@ -3,12 +3,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'neon-green': '#ffc3a0',
-        'primary': '#ffafbd',
-        'secondary': '#ffc3a0',
+        'neon-green': '#48cfc4',
+        'primary': '#5471b6',
+        'secondary': '#48cfc4',
       },
       backgroundImage: {
-        'blue-green-gradient': 'linear-gradient(247.23deg, #ffafbd 0%, #ffc3a0 100%)',
+        'blue-green-gradient': 'linear-gradient(247.23deg, #48cfc4 0%, #48cfc4 100%)',
       },
     },
   },
