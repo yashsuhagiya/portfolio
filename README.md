@@ -1,6 +1,6 @@
 # 🧑🏻‍💻 My personal website
 
-An attempt to create a miniminal js personal blog using [Astro](https://astro.build/).
+An attempt to create a miniminal js personal blog using [Astro](https://astro.build/). Template provided by [@paul](https://github.com/dreyfus92)
 
 ## 📚 Stack
 
