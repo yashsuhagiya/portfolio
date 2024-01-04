@@ -1,0 +1,27 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { workExperience } from "@utils/data";
+---
+
+<Layout
+  title="Experience | Yash Suhagiya"
+  description="Links for social media of Yash Suhagiya"
+>
+  <main class="mb-28">
+    <div class="flex items-center justify-center">
+        <div class="w-9/12 text-white md:w-[740px]">
+          <h2 class="text-3xl font-bold">Experience</h2>
+          {
+            workExperience.map((work) => (
+              <div class="mt-8">
+                <h3 class="text-xl mb-2 font-bold">
+                  <a href=`${work.link}` target="_blank">{work.company}</a> - {work.designation}
+                </h3>
+                <p class="text-sm mb-3">{work.duration}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+  </main>
+</Layout>

@@ -1,3 +1,5 @@
+import { link } from "fs";
+
 const technologies = [
   {
     name: "Astro",
@@ -90,4 +92,32 @@ const socials = [
   },
 ];
 
-export { technologies, socials };
+const workExperience = [
+  {
+    company: "SmartNanotubes Technologies",
+    designation: "Software Developer, Internship",
+    duration: "Sept 2023 – Present",
+    link: "https://smart-nanotubes.com/",
+  },
+  {
+    company: "PatentAssist.ai",
+    designation: "Principal Engineer, Part-time",
+    duration: "June 2023 – Present",
+    link: "https://patentassist.ai/",
+  },
+  {
+    company: "Technische Universität Dresden",
+    designation: "Student Assistant, IT-Services",
+    duration: "Aug 2023 – Sept 2023",
+    link: "https://tu-dresden.de/",
+  },
+  {
+    company: "Heaven Designs",
+    designation: "Web Developer, Internship",
+    duration: "Nov 2020 - Mar 2021",
+    link: "https://heavendesigns.in/",
+  },
+];
+
+
+export { technologies, socials, workExperience };
