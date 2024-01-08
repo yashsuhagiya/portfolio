@@ -3,10 +3,16 @@ const {color = "", lang = ""} = Astro.props
 ---
 
 <repo-lang data-color={color} data-lang={lang}>
+    {lang.length > 0 ? lang.map((lang: any, index: string | number) => {
+        return <p class="flex flex-row items-center">
+            <span id="dot" class="h-3 w-3 rounded-full inline-block mr-2"
+            ></span><strong>{lang[index]}</strong>
+        </p>
+    }) : 
     <p class="flex flex-row items-center">
         <span id="dot" class="h-3 w-3 rounded-full inline-block mr-2"
         ></span><strong>{lang}</strong>
-      </p>
+    </p> }
 </repo-lang>
 
 <script>
