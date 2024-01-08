@@ -1,11 +1,10 @@
 ---
-import RepoLang from "./RepoLang.astro";
-const { name, html_url, description, url , languages_url } = Astro.props;
+const { name, html_url, description, url, languages_url } = Astro.props;
 
-const language = await fetch(
-    languages_url 
-);
+const language = await fetch(languages_url);
 const languageData = await language.json();
+
+const lang = Object.keys(languageData)[0];
 ---
 
 <a class="group block h-56 cursor-pointer" href={html_url}>
@@ -37,7 +36,12 @@ const languageData = await language.json();
       <p class="my-2 text-base font-normal leading-relaxed">
         {description}
       </p>
-      <RepoLang lang={languageData} color={""} />
+      <p class="flex flex-row items-center">
+        <>
+          <span id="dot" class="h-3 w-3 rounded-full inline-block mr-2"></span>
+          <strong>{lang}</strong>
+        </>
+      </p>
     </div>
   </div>
 </a>
