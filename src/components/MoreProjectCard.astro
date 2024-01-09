@@ -4,10 +4,13 @@ const { name, html_url, description, url, languages_url } = Astro.props;
 const language = await fetch(languages_url);
 const languageData = await language.json();
 
-const lang = Object.keys(languageData)[0];
+let lang = Object.keys(languageData)[0];
+if (lang === "message") {
+  lang = "";
+}
 ---
 
-<a class="group block h-56 cursor-pointer" href={html_url}>
+<a class="group block h-56 cursor-pointer" href={html_url} target="_blank">
   <div
     class="text-white relative flex h-full items-end rounded-3xl border-2 border-black bg-[#646664] p-8 transition group-hover:-translate-x-2 group-hover:-translate-y-2 group-hover:shadow-[8px_8px_0_0_#000]"
   >
@@ -33,15 +36,19 @@ const lang = Object.keys(languageData)[0];
     >
       <h3 class="text-2xl font-bold">{name}</h3>
 
-      <p class="my-2 text-base font-normal leading-relaxed">
+      <p class="my-2 text-base font-normal leading-relaxed line-clamp-2">
         {description}
       </p>
-      <p class="flex flex-row items-center">
-        <>
-          <span id="dot" class="h-3 w-3 rounded-full inline-block mr-2"></span>
-          <strong>{lang}</strong>
-        </>
-      </p>
+      {
+        lang && (
+          <p class="flex flex-row items-center">
+            <>
+              <span id="dot" class="h-3 w-3 rounded-full inline-block mr-2 bg-lime-50" />
+              <strong>{lang}</strong>
+            </>
+          </p>
+        )
+      }
     </div>
   </div>
 </a>
