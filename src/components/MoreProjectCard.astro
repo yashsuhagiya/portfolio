@@ -1,13 +1,7 @@
 ---
-const { name, html_url, description, url, languages_url } = Astro.props;
+import { LanguageColors } from "@utils/data";
 
-const language = await fetch(languages_url);
-const languageData = await language.json();
-
-let lang = Object.keys(languageData)[0];
-if (lang === "message") {
-  lang = "";
-}
+const { name, html_url, description, url, language } = Astro.props;
 ---
 
 <a class="group block h-56 cursor-pointer" href={html_url} target="_blank">
@@ -40,11 +34,14 @@ if (lang === "message") {
         {description}
       </p>
       {
-        lang && (
+        language && (
           <p class="flex flex-row items-center">
             <>
-              <span id="dot" class="h-3 w-3 rounded-full inline-block mr-2 bg-lime-50" />
-              <strong>{lang}</strong>
+              <span
+                id="dot"
+                class="h-3 w-3 rounded-full inline-block mr-2"  style={`background-color: ${LanguageColors[language]}`}
+              />
+              <strong>{language}</strong>
             </>
           </p>
         )
