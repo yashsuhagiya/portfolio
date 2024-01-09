@@ -1,5 +1,3 @@
-import { link } from "fs";
-
 const technologies = [
   {
     name: "Astro",
@@ -68,6 +66,62 @@ const technologies = [
     altSrc: "Planetscale Logo",
     link: "https://planetscale.com/",
     ariaLink: "Planetscale Documentation Website",
+  },
+  {
+    name: "Docker",
+    imgSrc:
+      "https://upload.wikimedia.org/wikipedia/commons/e/ea/Docker_%28container_engine%29_logo_%28cropped%29.png",
+    altSrc: "Docker Logo",
+    link: "https://www.docker.com/",
+    ariaLink: "Docker Documentation Website",
+  },
+  {
+    name: "GitHub",
+    imgSrc:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Font_Awesome_5_brands_github.svg/2048px-Font_Awesome_5_brands_github.svg.png",
+    altSrc: "GitHub Logo",
+    link: "",
+    ariaLink: "GitHub Profile",
+  },
+  {
+    name: "Git",
+    imgSrc:
+      "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png",
+    altSrc: "Git Logo",
+    link: "https://git-scm.com/",
+    ariaLink: "Git Documentation Website",
+  },
+  {
+    name: "HTML5",
+    imgSrc:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1280px-HTML5_logo_and_wordmark.svg.png",
+    altSrc: "HTML Logo",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+    ariaLink: "HTML Documentation Website",
+  },
+  {
+    name: "CSS3",
+    imgSrc:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1280px-CSS3_logo_and_wordmark.svg.png",
+    altSrc: "CSS Logo",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+    ariaLink: "CSS Documentation Website",
+  },
+  {
+    name: "C",
+    imgSrc:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/1280px-C_Programming_Language.svg.png",
+    altSrc: "C Logo",
+    link: "https://www.cprogramming.com/",
+    ariaLink: "C Documentation Website",
+  },
+  {
+    name: "C++",
+    imgSrc:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1280px-ISO_C%2B%2B_Logo.svg.png",
+    altSrc: "C++ Logo",
+    link: "https://www.cplusplus.com/",
+    ariaLink: "C++ Documentation Website",
   },
 ];
 
@@ -162,6 +216,5 @@ const LanguageColors = {
   "Jupyter Notebook": "#DA5B0B",
   Dockerfile: "#384d54",
 };
-
 
 export { technologies, socials, workExperience, LanguageColors };
