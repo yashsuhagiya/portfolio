@@ -1,0 +1,36 @@
+name: Pull Request Title Validation
+
+on:
+  pull_request:
+    types: [opened, edited]
+
+jobs:
+  validate_title:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check Pull Request Title
+        id: check_title
+        run: |
+          title="${{ github.event.pull_request.title }}"
+          echo "Pull Request Title: $title"
+
+          if [[ $title =~ ^\[MAINTENANCE\].* ]] || [[ $title =~ ^[0-9]{16} ]]; then
+            echo "Valid title."
+            echo "::set-output name=short_title::${title:0:16}"
+            echo "Asana task: https://app.asana.com/0/1204844108755599/${title:0:16}"
+          else
+            echo "Invalid pull request title. The title should either start with '[MAINTENANCE]' or be a 16-digit number."
+            exit 1
+          fi
+
+      - name: Update Pull Request Description
+        env:
+          GITHUB_TOKEN: ${{ secrets.PR_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          curl -X PATCH \
+            -H "Authorization: token $PR_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d '{"body":"Asana task: https://app.asana.com/0/1204844108755599/${{ steps.check_title.outputs.short_title }}"}' \
+            https://api.github.com/repos/${{ github.repository }}/pulls/$PR_NUMBER
