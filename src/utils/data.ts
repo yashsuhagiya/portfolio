@@ -1,5 +1,3 @@
-import { link } from "fs";
-
 const technologies = [
   {
     name: "Astro",
@@ -69,6 +67,62 @@ const technologies = [
     link: "https://planetscale.com/",
     ariaLink: "Planetscale Documentation Website",
   },
+  {
+    name: "Docker",
+    imgSrc:
+      "https://upload.wikimedia.org/wikipedia/commons/e/ea/Docker_%28container_engine%29_logo_%28cropped%29.png",
+    altSrc: "Docker Logo",
+    link: "https://www.docker.com/",
+    ariaLink: "Docker Documentation Website",
+  },
+  {
+    name: "GitHub",
+    imgSrc:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Font_Awesome_5_brands_github.svg/2048px-Font_Awesome_5_brands_github.svg.png",
+    altSrc: "GitHub Logo",
+    link: "",
+    ariaLink: "GitHub Profile",
+  },
+  {
+    name: "Git",
+    imgSrc:
+      "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png",
+    altSrc: "Git Logo",
+    link: "https://git-scm.com/",
+    ariaLink: "Git Documentation Website",
+  },
+  {
+    name: "HTML5",
+    imgSrc:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1280px-HTML5_logo_and_wordmark.svg.png",
+    altSrc: "HTML Logo",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+    ariaLink: "HTML Documentation Website",
+  },
+  {
+    name: "CSS3",
+    imgSrc:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1280px-CSS3_logo_and_wordmark.svg.png",
+    altSrc: "CSS Logo",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+    ariaLink: "CSS Documentation Website",
+  },
+  {
+    name: "C",
+    imgSrc:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/1280px-C_Programming_Language.svg.png",
+    altSrc: "C Logo",
+    link: "https://www.cprogramming.com/",
+    ariaLink: "C Documentation Website",
+  },
+  {
+    name: "C++",
+    imgSrc:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1280px-ISO_C%2B%2B_Logo.svg.png",
+    altSrc: "C++ Logo",
+    link: "https://www.cplusplus.com/",
+    ariaLink: "C++ Documentation Website",
+  },
 ];
 
 const socials = [
@@ -119,5 +173,48 @@ const workExperience = [
   },
 ];
 
+const LanguageColors = {
+  JavaScript: "#f1e05a",
+  TypeScript: "#2b7489",
+  Python: "#3572A5",
+  HTML: "#e34c26",
+  CSS: "#563d7c",
+  SCSS: "#c6538c",
+  Shell: "#89e051",
+  Vue: "#2c3e50",
+  PHP: "#4F5D95",
+  Java: "#b07219",
+  C: "#555555",
+  "C++": "#f34b7d",
+  Cpp: "#f34b7d",
+  CSharp: "#178600",
+  Go: "#00ADD8",
+  Ruby: "#701516",
+  Dart: "#00B4AB",
+  Kotlin: "#F18E33",
+  Rust: "#dea584",
+  Swift: "#ffac45",
+  Scala: "#c22d40",
+  Perl: "#0298c3",
+  Lua: "#000080",
+  Haskell: "#5e5086",
+  Elixir: "#6e4a7e",
+  Clojure: "#db5855",
+  CoffeeScript: "#244776",
+  OCaml: "#3be133",
+  Erlang: "#B83998",
+  R: "#198CE7",
+  D: "#ba595e",
+  Julia: "#a270ba",
+  Crystal: "#000100",
+  FSharp: "#b845fc",
+  Assembly: "#6E4C13",
+  Astro: "#0d1117",
+  Node: "#43853d",
+  React: "#61dafb",
+  MDX: "#f9ac00",
+  "Jupyter Notebook": "#DA5B0B",
+  Dockerfile: "#384d54",
+};
 
-export { technologies, socials, workExperience };
+export { technologies, socials, workExperience, LanguageColors };

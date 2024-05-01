@@ -1,9 +1,10 @@
 ---
-import RepoLang from "./RepoLang.astro";
-const { repo, name, description, language } = Astro.props;
+import { LanguageColors } from "@utils/data";
+
+const { name, html_url, description, url, language } = Astro.props;
 ---
 
-<a class="group block h-56 cursor-pointer" href={repo} target="_blank">
+<a class="group block h-56 cursor-pointer" href={html_url} target="_blank">
   <div
     class="text-white relative flex h-full items-end rounded-3xl border-2 border-black bg-[#646664] p-8 transition group-hover:-translate-x-2 group-hover:-translate-y-2 group-hover:shadow-[8px_8px_0_0_#000]"
   >
@@ -29,10 +30,22 @@ const { repo, name, description, language } = Astro.props;
     >
       <h3 class="text-2xl font-bold">{name}</h3>
 
-      <p class="my-2 text-base font-normal leading-relaxed">
+      <p class="my-2 text-base font-normal leading-relaxed line-clamp-2">
         {description}
       </p>
-      <RepoLang lang={language.name} color={language.color} />
+      {
+        language && (
+          <p class="flex flex-row items-center">
+            <>
+              <span
+                id="dot"
+                class="h-3 w-3 rounded-full inline-block mr-2"  style={`background-color: ${LanguageColors[language]}`}
+              />
+              <strong>{language}</strong>
+            </>
+          </p>
+        )
+      }
     </div>
   </div>
 </a>
