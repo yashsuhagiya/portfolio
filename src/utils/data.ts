@@ -149,8 +149,14 @@ const socials = [
 const workExperience = [
   {
     company: "SmartNanotubes Technologies",
+    designation: "Work Student Software Developer",
+    duration: "March 2024 – Present",
+    link: "https://smart-nanotubes.com/",
+  },
+  {
+    company: "SmartNanotubes Technologies",
     designation: "Software Developer, Internship",
-    duration: "Sept 2023 – Present",
+    duration: "Sept 2023 – Feb 2024",
     link: "https://smart-nanotubes.com/",
   },
   {
