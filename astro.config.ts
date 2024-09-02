@@ -6,6 +6,8 @@ import sitemap from "@astrojs/sitemap";
 import vercel from "@astrojs/vercel/serverless";
 import prefetch from "@astrojs/prefetch";
 
+import react from "@astrojs/react";
+
 // https://astro.build/config
 export default defineConfig({
   markdown: {
@@ -30,6 +32,7 @@ export default defineConfig({
     mdx(),
     sitemap(),
     prefetch(),
+    react(),
   ],
   site: "https://yashsuhagiya.me/",
   output: "hybrid",
