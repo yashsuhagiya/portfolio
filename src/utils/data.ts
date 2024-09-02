@@ -85,8 +85,7 @@ const technologies = [
   },
   {
     name: "Git",
-    imgSrc:
-      "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png",
+    imgSrc: "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png",
     altSrc: "Git Logo",
     link: "https://git-scm.com/",
     ariaLink: "Git Documentation Website",
@@ -116,12 +115,12 @@ const technologies = [
     ariaLink: "C Documentation Website",
   },
   {
-    name: "C++",
+    name: "AWS",
     imgSrc:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1280px-ISO_C%2B%2B_Logo.svg.png",
-    altSrc: "C++ Logo",
-    link: "https://www.cplusplus.com/",
-    ariaLink: "C++ Documentation Website",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/512px-Amazon_Web_Services_Logo.svg.png",
+    altSrc: "AWS Logo",
+    link: "https://aws.amazon.com/",
+    ariaLink: "AWS Documentation Website",
   },
 ];
 

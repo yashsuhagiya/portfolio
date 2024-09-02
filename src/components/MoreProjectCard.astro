@@ -1,6 +1,12 @@
 ---
 import { LanguageColors } from "@utils/data";
 
+type LanguageColorMap = {
+  [key: string]: string;
+};
+
+const languageColors: LanguageColorMap = LanguageColors;
+
 const { name, html_url, description, url, language } = Astro.props;
 ---
 
@@ -39,7 +45,8 @@ const { name, html_url, description, url, language } = Astro.props;
             <>
               <span
                 id="dot"
-                class="h-3 w-3 rounded-full inline-block mr-2"  style={`background-color: ${LanguageColors[language]}`}
+                class="h-3 w-3 rounded-full inline-block mr-2"
+                style={`background-color: ${languageColors[language]}`}
               />
               <strong>{language}</strong>
             </>
