@@ -1,5 +1,7 @@
 {
-  "name": "planetary-pulsar",
+  "name": "yashsuhagiya.com",
+  "description": "Personal blog of Yash Suhagiya",
+  "author": "Yash Suhagiya <yash@patentassist.ai>",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -9,31 +11,34 @@
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "update-astro": "pnpm install astro@latest",
-    "update-integrations": "pnpm install @astrojs/mdx@latest @astrojs/prefetch@latest @astrojs/sitemap@latest @astrojs/tailwind@latest @astrojs/vercel@latest"
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@astrojs/mdx": "^1.1.0",
-    "@astrojs/prefetch": "^0.4.0",
-    "@astrojs/sitemap": "^3.0.0",
-    "@astrojs/tailwind": "^5.0.0",
-    "@astrojs/vercel": "^5.0.1",
-    "@vercel/analytics": "^1.1.2",
-    "astro": "^3.1.2",
-    "astro-icon": "^0.8.1",
+    "@astrojs/mdx": "^1.1.5",
+    "@astrojs/prefetch": "^0.4.1",
+    "@astrojs/react": "^3.6.2",
+    "@astrojs/sitemap": "^3.1.6",
+    "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/vercel": "^5.2.0",
+    "@vercel/analytics": "^1.3.1",
+    "astro": "^3.6.5",
+    "astro-capo": "^0.0.1",
+    "astro-icon": "^0.8.2",
+    "framer-motion": "^11.3.31",
     "mdast-util-to-string": "^3.2.0",
-    "motion": "^10.16.2",
+    "motion": "^10.18.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "reading-time": "^1.5.0",
-    "sharp": "^0.33.1",
-    "tailwindcss": "^3.3.3",
-    "zod": "^3.21.4"
+    "sharp": "^0.33.5",
+    "tailwindcss": "^3.4.10",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@types/node": "^18.17.4",
+    "@types/node": "^18.19.48",
     "@typescript-eslint/parser": "^5.62.0",
-    "eslint": "^8.46.0",
+    "eslint": "^8.57.0",
     "eslint-plugin-astro": "^0.27.2",
-    "eslint-plugin-jsx-a11y": "^6.7.1"
+    "eslint-plugin-jsx-a11y": "^6.9.0"
   }
 }
