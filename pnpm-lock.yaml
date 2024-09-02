@@ -69,6 +69,9 @@ importers:
       '@types/node':
         specifier: ^18.19.48
         version: 18.19.48
+      '@types/react':
+        specifier: ^18.3.5
+        version: 18.3.5
       '@typescript-eslint/parser':
         specifier: ^5.62.0
         version: 5.62.0(eslint@8.57.0)(typescript@5.5.4)
