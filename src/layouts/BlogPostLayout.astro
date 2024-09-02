@@ -3,10 +3,10 @@ import { Icon } from "astro-icon";
 import { getCollection } from "astro:content";
 import Navbar from "@components/Navbar.astro";
 import Footer from "@components/Footer.astro";
-import Head from "@components/Head.astro";
 import "@styles/posts.css";
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
+import HeadTags from "@components/HeadTags.astro";
 
 interface BlogPostLayoutProps {
   frontmatter: {
@@ -54,7 +54,7 @@ const prevPost = posts[index - 1];
 
 <html lang="en">
   <head>
-    <Head title={frontmatter.title} description={frontmatter.description} />
+    <HeadTags title={frontmatter.title} description={frontmatter.description} />
   </head>
   <Navbar display={false} />
   <body>
