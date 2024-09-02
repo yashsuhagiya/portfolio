@@ -1,6 +1,6 @@
 # 🧑🏻‍💻 My personal website
 
-An attempt to create a miniminal js personal blog using [Astro](https://astro.build/). Template provided by [@paul](https://github.com/dreyfus92)
+An attempt to create a miniminal js personal blog using [Astro](https://astro.build/).
 
 ## 📚 Stack
 
@@ -8,3 +8,6 @@ An attempt to create a miniminal js personal blog using [Astro](https://astro.bu
 - Deployment: [Vercel](https://vercel.com/)
 - Package manager: [pnpm](https://pnpm.io/)
 - CSS: [Tailwind CSS](https://tailwindcss.com/)
+
+## Special Thanks
+Template provided by [@paul](https://github.com/dreyfus92)
