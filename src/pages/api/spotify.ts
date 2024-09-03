@@ -7,9 +7,15 @@ export const GET: APIRoute = async () => {
   // Get access token from Spotify
   const getAccessToken = async () => {
     // Get environment variables
-    const refresh_token = import.meta.env.SPOTIFY_REFRESH_TOKEN;
-    const client_id = import.meta.env.SPOTIFY_CLIENT_ID;
-    const client_secret = import.meta.env.SPOTIFY_CLIENT_SECRET;
+    const refresh_token = process.env.SPOTIFY_REFRESH_TOKEN;
+    const client_id = process.env.SPOTIFY_CLIENT_ID;
+    const client_secret = process.env.SPOTIFY_CLIENT_SECRET;
+
+    if (!refresh_token || !client_id || !client_secret) {
+      return new Response(JSON.stringify({ isPlaying: false }), {
+        status: 200,
+      });
+    }
 
     const basic = Buffer.from(`${client_id}:${client_secret}`).toString(
       "base64"
