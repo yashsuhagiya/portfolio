@@ -3,8 +3,8 @@ import { remarkReadingTime } from "./src/utils/readingTime.js";
 import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
-import vercel from "@astrojs/vercel/serverless";
 import prefetch from "@astrojs/prefetch";
+import vercelServerless from "@astrojs/vercel/serverless";
 
 import react from "@astrojs/react";
 
@@ -35,11 +35,6 @@ export default defineConfig({
     react(),
   ],
   site: "https://yashsuhagiya.me/",
-  output: "hybrid",
-  adapter: vercel({
-    edgeMiddleware: true,
-    webAnalytics: {
-      enabled: true,
-    },
-  }),
+  output: "server",
+  adapter: vercelServerless(),
 });
