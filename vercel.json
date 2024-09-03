@@ -1,7 +1,14 @@
 {
+  "version": 2,
+  "builds": [
+    { "src": "src/pages/api/**/*.ts", "use": "@vercel/node" },
+    { "src": "src/pages/**/*.astro", "use": "@astrojs/vercel/static" },
+    { "src": "src/pages/**/*.mdx", "use": "@astrojs/vercel/static" },
+    { "src": "src/pages/**/*.tsx", "use": "@astrojs/vercel/static" }
+  ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "src/pages/api/$1" },
     { "handle": "filesystem" },
-    { "src": "/(.*)", "status": 404, "dest": "/pages/404.html" }
+    { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "src": "/(.*)", "status": 404, "dest": "/404.html" }
   ]
 }
