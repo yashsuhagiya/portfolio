@@ -35,7 +35,7 @@ export default defineConfig({
     react(),
   ],
   site: "https://yashsuhagiya.com/",
-  output: "hybrid",
+  output: "server",
   adapter: vercel({
     edgeMiddleware: true,
     webAnalytics: {

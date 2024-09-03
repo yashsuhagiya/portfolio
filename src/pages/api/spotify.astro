@@ -1,0 +1,7 @@
+---
+import { getCurrentTrack } from "@utils/spotify";
+
+if (Astro.request.method === "GET") {
+  return await getCurrentTrack();
+}
+---
