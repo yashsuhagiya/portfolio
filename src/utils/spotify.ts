@@ -1,16 +1,16 @@
 export type Artist = {
-    name: string,
-    images: { url: string }[],
-    external_urls: { spotify: string },
-    followers: { total: number },
-}
+  name: string;
+  images: { url: string }[];
+  external_urls: { spotify: string };
+  followers: { total: number };
+};
 
 export type NowPlayingTrackResponse = {
-    isPlaying: boolean;
-    title: string;
-    artist: string;
-    url: string;
-    img: string;
+  isPlaying: boolean;
+  title: string;
+  artist: string;
+  url: string;
+  img: string;
 };
 
 // Get access token from Spotify

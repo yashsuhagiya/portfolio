@@ -54,10 +54,10 @@ export const GET: APIRoute = async () => {
   const track = {
     isPlaying: true,
     title: item.name,
-    artist: item.artists.map((_artist: Artist) => _artist.name).join(', '),
+    artist: item.artists.map((_artist: Artist) => _artist.name).join(", "),
     url: item.external_urls.spotify,
     img: item.album.images[0].url,
-  }
+  };
 
   return new Response(JSON.stringify(track), {
     status: 200,
