@@ -1,5 +1,8 @@
 {
+  "version": 2,
+  "builds": [{ "src": "src/pages/api/*.ts", "use": "@vercel/node" }],
   "routes": [
+    { "src": "/api/(.*)", "dest": "src/pages/api/$1" },
     { "handle": "filesystem" },
     { "src": "/(.*)", "status": 404, "dest": "/pages/404.html" }
   ]
