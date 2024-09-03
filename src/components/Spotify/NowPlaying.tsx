@@ -24,7 +24,7 @@ export const NowPlaying = ({ props }: { props: NowPlayingTrackResponse }) => {
     <span
       onMouseEnter={onMouseEnterNowPlaying}
       onMouseLeave={onMouseLeaveNowPlaying}
-      className="relative flex justify-center w-full cursor-pointer"
+      className="relative w-fit cursor-pointer"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +66,7 @@ export const NowPlaying = ({ props }: { props: NowPlayingTrackResponse }) => {
       <a
         id="first"
         href={props.url}
-        className="absolute left-1 hidden transform -translate-y-1/2 z-50 whitespace-nowrap items-center text-sm text-neutral-200 opacity-0 hover:text-accent shadow-sm md:flex md:text-base"
+        className="absolute -top-0 hidden transform -translate-y-1/2 z-50 whitespace-nowrap items-center text-sm text-neutral-200 opacity-0 hover:text-accent shadow-sm md:flex md:text-base"
         aria-label={`Listen to ${props.title} by ${props.artist}`}
       >
         <div className="relative p-4 bg-neutral-700 rounded-lg shadow-md flex flex-col">
