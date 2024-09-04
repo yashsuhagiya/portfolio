@@ -1,3 +1,5 @@
+export const prerender = false;
+
 import { type Artist } from "@utils/spotify";
 import type { APIRoute } from "astro/dist/@types/astro";
 
