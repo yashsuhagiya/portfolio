@@ -36,7 +36,6 @@ export default defineConfig({
   ],
   site: "https://yashsuhagiya.com/",
   output: "hybrid",
-  trailingSlash: "never",
   adapter: vercel({
     edgeMiddleware: true,
     webAnalytics: {
