@@ -35,7 +35,7 @@ export default defineConfig({
     react(),
   ],
   site: "https://yashsuhagiya.com/",
-  output: "server",
+  output: "hybrid",
   trailingSlash: "always",
   adapter: vercel({
     edgeMiddleware: true,
