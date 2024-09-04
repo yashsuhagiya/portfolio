@@ -1,7 +1,5 @@
-export const prerender = false
-
-import { type Artist } from '@utils/spotify'
-import type { APIRoute } from 'astro'
+import { type Artist } from "@utils/spotify";
+import type { APIRoute } from "astro/dist/@types/astro";
 
 export const GET: APIRoute = async () => {
   // Get access token from Spotify
@@ -46,10 +44,10 @@ export const GET: APIRoute = async () => {
   if (response.status === 204 || response.status > 400) {
     return new Response(JSON.stringify({ isPlaying: false }), {
       status: 200,
-    })
+    });
   }
 
-  const { item } = await response.json()
+  const { item } = await response.json();
 
   const track = {
     isPlaying: true,
@@ -61,5 +59,5 @@ export const GET: APIRoute = async () => {
 
   return new Response(JSON.stringify(track), {
     status: 200,
-  })
-}
+  });
+};
