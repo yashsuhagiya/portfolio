@@ -6,7 +6,7 @@ import { NowPlaying } from './NowPlaying'
 export const SpotifyNowPlaying: FC = () => {
   const [spotifyData, setSpotifyData] = useState<NowPlayingTrackResponse>();
   useEffect(() => {
-    fetch("/api/spotify") // Fetch the Spotify data from ~/pages/api/spotify.ts
+    fetch("/api/spotify.json/") // Fetch the Spotify data from ~/pages/api/spotify.ts
       .then((res) => res.json())
       .then((data) => setSpotifyData(data));
   }, []);
