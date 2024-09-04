@@ -1,7 +1,7 @@
 export const prerender = false;
 
 import { type Artist } from "@utils/spotify";
-import type { APIRoute } from "astro/dist/@types/astro";
+import type { APIRoute } from "astro";
 
 export const GET: APIRoute = async () => {
   // Get access token from Spotify
