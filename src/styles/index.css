@@ -2,9 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: 'MyfontYash';
+    src: url('/fonts/Myfont-Regular.otf') format('opentype');
+    size-adjust: 150%;
+  }
+}
+
 body {
   @apply bg-neutral-800 break-words antialiased;
-  font-family: Roboto, monospace;
+  font-family: "MyfontYash", monospace;
   text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
   word-wrap: break-word;
