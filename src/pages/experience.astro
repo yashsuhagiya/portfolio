@@ -1,6 +1,6 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import { workExperience } from "@utils/data";
+import { workExperience, education } from "@utils/data";
 ---
 
 <Layout
@@ -18,6 +18,22 @@ import { workExperience } from "@utils/data";
                   <a href=`${work.link}` target="_blank">{work.company}</a> - {work.designation}
                 </h3>
                 <p class="text-sm mb-3">{work.duration}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center mt-10">
+        <div class="w-9/12 text-white md:w-[740px]">
+          <h2 class="text-3xl font-bold">Education</h2>
+          {
+            education.map((e) => (
+              <div class="mt-8">
+                <h3 class="text-xl mb-2 font-bold">
+                  <a href=`${e.link}` target="_blank">{e.university}</a> - {e.degree}
+                </h3>
+                <p class="text-sm mb-3">{e.duration}</p>
               </div>
             ))
           }

@@ -178,6 +178,21 @@ const workExperience = [
   },
 ];
 
+const education = [
+  {
+    university: "Technische Universität Dresden",
+    degree: "M.Sc. in Distributed Systems Engineering",
+    duration: "Oct 2021 – Present",
+    link: "https://tu-dresden.de/",
+  },
+  {
+    university: "Dharmsinh Desai University",
+    degree: "B.Tech. in Information Technology",
+    duration: "Aug 2017 – May 2021",
+    link: "https://ddu.ac.in/",
+  },
+];
+
 const LanguageColors = {
   JavaScript: "#f1e05a",
   TypeScript: "#2b7489",
@@ -222,4 +237,4 @@ const LanguageColors = {
   Dockerfile: "#384d54",
 };
 
-export { technologies, socials, workExperience, LanguageColors };
+export { technologies, socials, workExperience, LanguageColors, education };
