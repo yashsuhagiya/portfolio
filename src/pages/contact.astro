@@ -1,6 +1,8 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import { Icon } from "astro-icon";
+
+const access_code = process.env.ACCESS_CODE;
 ---
 
 <Layout title="Contact | Yash Suhagiya">
@@ -13,7 +15,7 @@ import { Icon } from "astro-icon";
       <form
         id="contact-form"
         class="flex flex-col rounded-lg w-[320px] md:w-[750px] p-20 gap-4 bg-zinc-900 text-white [&_input]:block [&_input]:bg-zinc-800 max-sm:[&_input]:w-full [&_textarea]:block [&_textarea]:bg-zinc-800 [&_select]:block [&_select]:bg-zinc-800 [&_select]:text-white"
-        action="https://getform.io/f/0c6e2bca-3150-401f-986f-8fc639206aaf"
+        action=`https://getform.io/f/${access_code}`
         method="POST"
       >
         <label for="name" class="font-semibold">Name</label>
@@ -35,7 +37,12 @@ import { Icon } from "astro-icon";
           required
         />
         <label for="subject" class="font-semibold">Subject</label>
-        <select id="subject" name="subject" class="rounded-sm p-5 appearance-none" required>
+        <select
+          id="subject"
+          name="subject"
+          class="rounded-sm p-5 appearance-none"
+          required
+        >
           <option value="General">General</option>
           <option value="Freelance Work">Freelance Work</option>
           <option value="Collaboration">Collaboration</option>
@@ -54,10 +61,11 @@ import { Icon } from "astro-icon";
           class="flex self-center items-center gap-1 w-fit px-4 py-2 rounded-lg text-white font-semibold bg-gray-400 backdrop-blur-lg bg-opacity-10 mt-4 hover:scale-105 hover:transition-transform hover:duration-300"
         >
           <Icon name="ic:baseline-send" class="h-4" />
-           Send
+          Send
         </button>
         <div class="form-message">
-           <span class="output_message text-center font-weight-600 uppercase"></span>
+          <span class="output_message text-center font-weight-600 uppercase"
+          ></span>
         </div>
       </form>
     </div>
