@@ -36,7 +36,7 @@ export const NowPlaying = ({ props }: { props: NowPlayingTrackResponse }) => {
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        className="text-neon-green"
+        className="text-accent"
       >
         <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5">
           <animate
@@ -66,7 +66,7 @@ export const NowPlaying = ({ props }: { props: NowPlayingTrackResponse }) => {
       <a
         id="first"
         href={props.url}
-        className="absolute -top-0 hidden transform -translate-y-1/2 z-50 whitespace-nowrap items-center text-sm text-neutral-200 opacity-0 hover:text-neon-green shadow-sm md:flex md:text-base"
+        className="absolute -top-0 hidden transform -translate-y-1/2 z-50 whitespace-nowrap items-center text-sm text-neutral-200 opacity-0 hover:text-accent shadow-sm md:flex md:text-base"
         aria-label={`Listen to ${props.title} by ${props.artist}`}
       >
         <div className="relative p-4 bg-neutral-700 rounded-lg shadow-md flex flex-col">

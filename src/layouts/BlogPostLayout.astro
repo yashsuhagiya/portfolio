@@ -87,7 +87,7 @@ const prevPost = posts[index - 1];
             prevPost && (
               <a
                 href={`/posts/${prevPost.slug}`}
-                class="flex flex-col grow text-sm p-4 border rounded border-zinc-700 hover:border-neon-green transition duration-500 ease-out"
+                class="flex flex-col grow text-sm p-4 border rounded border-zinc-700 hover:border-accent transition duration-500 ease-out"
               >
                 <p class="text-zinc-400 mb-1">&larr; Previous post</p>
                 <p class="font-semibold text-zinc-300">{prevPost.data.title}</p>
@@ -98,7 +98,7 @@ const prevPost = posts[index - 1];
             nextPost && (
               <a
                 href={`/posts/${nextPost.slug}`}
-                class="flex flex-col grow text-right text-sm p-4 border rounded border-zinc-700 hover:border-neon-green transition duration-500 ease-out"
+                class="flex flex-col grow text-right text-sm p-4 border rounded border-zinc-700 hover:border-accent transition duration-500 ease-out"
               >
                 <p class="mb-1">Next post &rarr;</p>
                 <p class="font-semibold text-zinc-300">{nextPost.data.title}</p>

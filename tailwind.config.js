@@ -2,13 +2,13 @@ module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     fontFamily: {
-      display: ['"MyfontYash"', "Arial", "cursive"],
+      display: ['"Grotesk"', "Arial", "cursive"],
     },
     extend: {
       colors: {
-        "neon-green": "#48cfc4",
         primary: "#5471b6",
         secondary: "#48cfc4",
+        accent: "#48cfc4",
       },
       backgroundImage: {
         "blue-green-gradient":

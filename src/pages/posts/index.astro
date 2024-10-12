@@ -54,7 +54,7 @@ const getReadingTime = async (post: CollectionEntry<"posts">) => {
         {
           years.map((year) => (
             <div>
-              <h2 class="pb-10 pl-2 text-neon-green">{year}</h2>
+              <h2 class="pb-10 pl-2 text-accent">{year}</h2>
               <ul>
                 {postsByYear.get(year)?.map((post) => (
                   <BlogCard
