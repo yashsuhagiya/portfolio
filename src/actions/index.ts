@@ -12,7 +12,6 @@ import { Buffer } from "node:buffer";
 export const server = {
   spotify: {
     playing: defineAction({
-      accept: "json",
       handler: async (_) => {
         const refresh_token = SPOTIFY_REFRESH_TOKEN;
         const client_id = SPOTIFY_CLIENT_ID;
