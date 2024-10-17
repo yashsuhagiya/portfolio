@@ -1,3 +1,5 @@
+export const prerender = true;
+
 import type { Artist } from "@utils/spotify";
 import { ActionError, defineAction } from "astro:actions";
 import {
