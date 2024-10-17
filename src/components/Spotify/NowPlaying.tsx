@@ -33,9 +33,9 @@ export const NowPlaying = ({ props }: { props: NowPlayingTrackResponse }) => {
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         className="text-accent"
       >
         <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5">
@@ -66,10 +66,10 @@ export const NowPlaying = ({ props }: { props: NowPlayingTrackResponse }) => {
       <a
         id="first"
         href={props.url}
-        className="absolute -top-0 hidden transform -translate-y-1/2 z-50 whitespace-nowrap items-center text-sm text-neutral-200 opacity-0 hover:text-accent shadow-sm md:flex md:text-base"
+        className="absolute hidden transform -translate-y-1/2 z-50 whitespace-nowrap items-center text-sm text-neutral-200 opacity-0 hover:text-accent shadow-sm md:flex md:text-base"
         aria-label={`Listen to ${props.title} by ${props.artist}`}
       >
-        <div className="relative p-4 bg-neutral-700 rounded-lg shadow-md flex flex-col">
+        <div className="relative p-4 bg-neutral-800 rounded-xl shadow-md flex flex-col">
           {/* Spotify Logo */}
           <img
             src="/spotify-logo.png"
@@ -81,7 +81,7 @@ export const NowPlaying = ({ props }: { props: NowPlayingTrackResponse }) => {
           <img
             src={props.img}
             alt={`${props.title} album cover`}
-            className="w-24 h-24 rounded-sm shadow-lg"
+            className="w-28 h-28 rounded-lg shadow-lg"
           />
 
           {/* Title and Artists */}
@@ -89,7 +89,7 @@ export const NowPlaying = ({ props }: { props: NowPlayingTrackResponse }) => {
             <p className="text-base font-semibold text-white leading-tight">
               {props.title}
             </p>
-            <p className="text-sm text-neutral-300 leading-snug">
+            <p className="text-sm text-neutral-400 leading-snug">
               {props.artist}
             </p>
           </div>

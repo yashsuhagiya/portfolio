@@ -1,4 +1,4 @@
-import { defineConfig } from "astro/config";
+import { defineConfig, envField } from "astro/config";
 import { remarkReadingTime } from "./src/utils/readingTime.js";
 import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
@@ -35,6 +35,28 @@ export default defineConfig({
     react(),
   ],
   site: "https://yashsuhagiya.com/",
+  experimental: {
+    serverIslands: true,
+    env: {
+      schema: {
+        SPOTIFY_CLIENT_ID: envField.string({
+          context: "server",
+          access: "secret",
+          default: "",
+        }),
+        SPOTIFY_CLIENT_SECRET: envField.string({
+          context: "server",
+          access: "secret",
+          default: "",
+        }),
+        SPOTIFY_REFRESH_TOKEN: envField.string({
+          context: "server",
+          access: "secret",
+          default: "",
+        }),
+      },
+    },
+  },
   output: "hybrid",
   adapter: vercel({
     webAnalytics: {

@@ -1,0 +1,19 @@
+---
+import { NotPlaying } from "./NotPlaying";
+import { NowPlaying } from "./NowPlaying";
+import { actions } from "astro:actions";
+
+// call the action from the frontmatter of the component
+const result = await Astro.callAction(actions.spotify.playing, {});
+const spotifyData = result?.data?.spotifyData;
+---
+
+<li class="hidden md:block">
+  {
+    spotifyData?.isPlaying ? (
+      <NowPlaying props={spotifyData} client:load />
+    ) : (
+      <NotPlaying client:load />
+    )
+  }
+</li>
