@@ -10,15 +10,12 @@ export const SpotifyNowPlaying = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const fetchSpotifyData = async () => {
-    // const result = await actions.spotify.playing({});
-    // const data = result?.data?.spotifyData;
-
-    const result = await fetch("/spotify");
-    const data = await result.json();
+    const result = await actions.spotify.playing();
+    const data = result?.data?.spotifyData;
 
     if (data) {
-      setSpotifyData(data.spotifyData);
-      setIsPlaying(data.spotifyData.isPlaying);
+      setSpotifyData(data);
+      setIsPlaying(data.isPlaying);
     }
   };
 
