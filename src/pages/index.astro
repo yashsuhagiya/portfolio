@@ -32,6 +32,22 @@ const data = await pinnedRepos.json();
 const repo = data.data;
 ---
 
+<script>
+  import { ScrambleText } from "@utils/scrambledText";
+
+  const scramble = new ScrambleText({
+    text: "Yash Suhagiya",
+    speed: 0.2,
+  });
+  const targetElement = document.getElementById("myself");
+  if (targetElement) {
+    scramble.setTargetElement(targetElement);
+    scramble.play();
+  }
+
+  console.log(targetElement);
+</script>
+
 <Layout title="Home  | Yash Suhagiya">
   <main>
     <div class="flex flex-col-reverse items-center justify-center md:flex-row">
@@ -41,19 +57,20 @@ const repo = data.data;
         >
           Hey, I'm
         </span>
+        <br />
         <span
+          id="myself"
           class="gradient-animation text-transparent text-5xl lg:text-6xl pb-3 font-[1000] tracking-tight xl:tracking-tight bg-clip-text bg-gradient-to-br from-primary to-accent text-center md:text-left"
         >
-          <br />Yash Suhagiya
         </span>
         <h3 class="text-base mt-5 mb-5 glitch text-left">
           Eat, Code, Sleep and Repeat!
         </h3>
         <span class="mt-4 text-lg text-center md:text-left">
-          Welcome to my small online area! I am a software engineer completing
-          my master's degree at TU Dresden. I am passionate about <strong
+          Welcome to my small online area! I am passionate about <strong
             >software development</strong
           >, and <strong>DevOps.</strong>
+          Always down to chat about code or collaborate on interesting projects.
         </span>
       </div>
       <img
@@ -66,7 +83,7 @@ const repo = data.data;
     <div class="my-5 flex items-center justify-center md:my-8">
       <div class="w-9/12 text-white md:w-[740px]">
         <span class="text-lg mt-2 glitch text-center md:text-left">
-          I am currently employed as a Principle Engineer at both
+          I am currently employed as a Principal Software Engineer at both
           <a
             href="https://patentassist.ai"
             target="_blank"
@@ -76,28 +93,22 @@ const repo = data.data;
             href="https://incubolabs.com/"
             target="_blank"
             class="rounded-lg hover:text-primary">IncuboLabs</a
-          >. I have also written a couple of blogs for
-          <a
-            href="https://kundligpt.com/"
-            target="_blank"
-            class="rounded-lg hover:text-primary">KundliGPT</a
-          >.
+          >. Also,
           <a
             href="https://smart-nanotubes.com/"
             target="_blank"
             class="rounded-lg hover:text-primary">SmartNanotubes</a
-          > has hired me as a master thesis student.
+          > has hired me for a part-time role as Junior Software Engineer.
         </span>
         <a href="/experience" class="text-sm">See More</a>
       </div>
     </div>
     <div class="my-5 flex items-center justify-center md:my-10">
       <div class="w-9/12 text-white md:w-[740px]">
-        <h2 class="text-3xl font-bold">Technologies</h2>
+        <h2 class="text-3xl font-bold">Tools I Use</h2>
         <p class="mt-4 text-left">
           I like playing around and learning new programming languages,
-          frameworks and libraries. These are the technologies that I love
-          working with:
+          frameworks and libraries. Here's what I've been playing with lately:
         </p>
         <div
           class="grid grid-cols-2 gap-y-5 md:grid-cols-3 md:gap-y-8 md:gap-x-4 mt-10"
@@ -118,7 +129,7 @@ const repo = data.data;
     </div>
     <div class="my-10 flex items-center justify-center md:my-16">
       <div class="w-9/12 text-white md:w-[740px]">
-        <h2 class="text-3xl font-bold">Projects / Assignments</h2>
+        <h2 class="text-3xl font-bold">Stuff I've worked on</h2>
         <p class="mt-4 text-left"></p>
         <div
           class="grid grid-cols-1 gap-y-5 md:grid-cols-2 md:gap-y-8 md:gap-x-4 mt-10"
