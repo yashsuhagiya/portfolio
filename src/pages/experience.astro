@@ -1,6 +1,22 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import { workExperience, education } from "@utils/data";
+
+// Group work experience by company
+const groupedExperience = workExperience.reduce((acc: Record<string, { link: string; roles: { designation: string; duration: string; }[] }>, curr) => {
+  if (!acc[curr.company]) {
+    acc[curr.company] = {
+      link: curr.link,
+      roles: [],
+    };
+  }
+  acc[curr.company].roles.push({
+    designation: curr.designation,
+    duration: curr.duration,
+  });
+  return acc;
+}, {});
+
 ---
 
 <Layout
@@ -9,20 +25,26 @@ import { workExperience, education } from "@utils/data";
 >
   <main class="mb-28">
     <div class="flex items-center justify-center">
-        <div class="w-9/12 text-white md:w-[740px]">
-          <h2 class="text-3xl font-bold">Experience</h2>
-          {
-            workExperience.map((work) => (
-              <div class="mt-8">
-                <h3 class="text-xl mb-2 font-bold">
-                  <a href=`${work.link}` target="_blank">{work.company}</a> - {work.designation}
-                </h3>
-                <p class="text-sm mb-3">{work.duration}</p>
-              </div>
-            ))
-          }
-        </div>
+      <div class="w-9/12 text-white md:w-[740px]">
+        <h2 class="text-3xl font-bold">Experience</h2>
+        {
+          Object.entries(groupedExperience).map(([company, data]) => (
+            <div class="mt-8">
+              <h3 class="text-xl mb-2 font-bold">
+                <a href={data.link} target="_blank" rel="noopener noreferrer">{company}</a>
+              </h3>
+              <ul class="ml-4 list-disc">
+                {data.roles.map(({ designation, duration }, idx) => (
+                  <li class="mb-2">
+                    <span class="font-semibold">{designation}</span> – <span class="text-sm">{duration}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
       </div>
+    </div>
 
       <div class="flex items-center justify-center mt-10">
         <div class="w-9/12 text-white md:w-[740px]">

@@ -21,14 +21,14 @@ const technologies = [
     link: "https://nodejs.org/en/",
     ariaLink: "Node.js Documentation Website",
   },
-  {
-    name: "Python",
-    imgSrc:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/768px-Python-logo-notext.svg.png",
-    altSrc: "Python Logo",
-    link: "https://www.python.org/",
-    ariaLink: "Python Documentation Website",
-  },
+  // {
+  //   name: "Python",
+  //   imgSrc:
+  //     "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/768px-Python-logo-notext.svg.png",
+  //   altSrc: "Python Logo",
+  //   link: "https://www.python.org/",
+  //   ariaLink: "Python Documentation Website",
+  // },
   {
     name: "React",
     imgSrc:
@@ -60,13 +60,13 @@ const technologies = [
     link: "https://nextjs.org/",
     ariaLink: "Next.js Documentation Website",
   },
-  {
-    name: "Planetscale",
-    imgSrc: "https://avatars.githubusercontent.com/u/35612527?s=280&v=4",
-    altSrc: "Planetscale Logo",
-    link: "https://planetscale.com/",
-    ariaLink: "Planetscale Documentation Website",
-  },
+  // {
+  //   name: "Planetscale",
+  //   imgSrc: "https://avatars.githubusercontent.com/u/35612527?s=280&v=4",
+  //   altSrc: "Planetscale Logo",
+  //   link: "https://planetscale.com/",
+  //   ariaLink: "Planetscale Documentation Website",
+  // },
   {
     name: "Docker",
     imgSrc:
@@ -90,30 +90,30 @@ const technologies = [
     link: "https://git-scm.com/",
     ariaLink: "Git Documentation Website",
   },
-  {
-    name: "HTML5",
-    imgSrc:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1280px-HTML5_logo_and_wordmark.svg.png",
-    altSrc: "HTML Logo",
-    link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
-    ariaLink: "HTML Documentation Website",
-  },
-  {
-    name: "CSS3",
-    imgSrc:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1280px-CSS3_logo_and_wordmark.svg.png",
-    altSrc: "CSS Logo",
-    link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
-    ariaLink: "CSS Documentation Website",
-  },
-  {
-    name: "C",
-    imgSrc:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/1280px-C_Programming_Language.svg.png",
-    altSrc: "C Logo",
-    link: "https://www.cprogramming.com/",
-    ariaLink: "C Documentation Website",
-  },
+  // {
+  //   name: "HTML5",
+  //   imgSrc:
+  //     "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1280px-HTML5_logo_and_wordmark.svg.png",
+  //   altSrc: "HTML Logo",
+  //   link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+  //   ariaLink: "HTML Documentation Website",
+  // },
+  // {
+  //   name: "CSS3",
+  //   imgSrc:
+  //     "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1280px-CSS3_logo_and_wordmark.svg.png",
+  //   altSrc: "CSS Logo",
+  //   link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+  //   ariaLink: "CSS Documentation Website",
+  // },
+  // {
+  //   name: "C",
+  //   imgSrc:
+  //     "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/1280px-C_Programming_Language.svg.png",
+  //   altSrc: "C Logo",
+  //   link: "https://www.cprogramming.com/",
+  //   ariaLink: "C Documentation Website",
+  // },
   {
     name: "AWS",
     imgSrc:
@@ -148,8 +148,14 @@ const socials = [
 const workExperience = [
   {
     company: "SmartNanotubes Technologies",
+    designation: "Junior Software Engineer, Part-time",
+    duration: "April 2025 – Present",
+    link: "https://smart-nanotubes.com/",
+  },
+  {
+    company: "SmartNanotubes Technologies",
     designation: "Work Student Software Developer",
-    duration: "March 2024 – Present",
+    duration: "March 2024 – March 2025",
     link: "https://smart-nanotubes.com/",
   },
   {
@@ -160,7 +166,7 @@ const workExperience = [
   },
   {
     company: "PatentAssist.ai",
-    designation: "Principal Engineer, Part-time",
+    designation: "Principal Software Engineer, Self-Employed",
     duration: "June 2023 – Present",
     link: "https://patentassist.ai/",
   },

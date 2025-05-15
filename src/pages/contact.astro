@@ -14,7 +14,7 @@ const access_code = process.env.ACCESS_CODE;
     >
       <form
         id="contact-form"
-        class="flex flex-col rounded-lg w-[320px] md:w-[750px] p-8 lg:p-20 gap-4 bg-zinc-900 text-white [&_input]:block [&_input]:bg-zinc-800 max-sm:[&_input]:w-full [&_textarea]:block [&_textarea]:bg-zinc-800 [&_select]:block [&_select]:bg-zinc-800 [&_select]:text-white"
+        class="flex flex-col rounded-lg w-[350px] md:w-[600px] h-auto p-8 lg:p-10 gap-4 bg-zinc-900 text-white [&_input]:block [&_input]:bg-zinc-800 max-sm:[&_input]:w-full [&_textarea]:block [&_textarea]:bg-zinc-800 [&_select]:block [&_select]:bg-zinc-800 [&_select]:text-white"
         action=`https://getform.io/f/${access_code}`
         method="POST"
       >
@@ -24,7 +24,7 @@ const access_code = process.env.ACCESS_CODE;
           id="name"
           name="name"
           placeholder="Jane Doe"
-          class="rounded-sm p-5"
+          class="rounded-sm p-3"
           required
         />
         <label for="email" class="font-semibold">Email</label>
@@ -33,14 +33,14 @@ const access_code = process.env.ACCESS_CODE;
           id="email"
           name="email"
           placeholder="jane.doe@example.com"
-          class="rounded-sm p-5"
+          class="rounded-sm p-3"
           required
         />
         <label for="subject" class="font-semibold">Subject</label>
         <select
           id="subject"
           name="subject"
-          class="rounded-sm p-5 appearance-none"
+          class="rounded-sm p-3 appearance-none"
           required
         >
           <option value="General">General</option>
@@ -54,7 +54,7 @@ const access_code = process.env.ACCESS_CODE;
           id="message"
           name="message"
           placeholder="Hello, I am Jane Doe..."
-          class="h-48 rounded-sm p-5 resize-none"
+          class="h-48 rounded-sm p-3 resize-none"
           required></textarea>
         <button
           type="submit"
