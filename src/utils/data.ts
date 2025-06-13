@@ -167,7 +167,7 @@ const workExperience = [
   {
     company: "PatentAssist.ai",
     designation: "Principal Software Engineer, Self-Employed",
-    duration: "June 2023 – Present",
+    duration: "June 2023 – June 2025",
     link: "https://patentassist.ai/",
   },
   {
