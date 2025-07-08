@@ -10,12 +10,19 @@ export const SpotifyNowPlaying = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const fetchSpotifyData = async () => {
-    const result = await actions.spotify.playing();
-    const data = result?.data?.spotifyData;
+    try {
+      const result = await actions.spotify.playing();
+      const data = result?.data?.spotifyData;
 
-    if (data) {
-      setSpotifyData(data);
-      setIsPlaying(data.isPlaying);
+      if (data) {
+        setSpotifyData(data);
+        setIsPlaying(data.isPlaying);
+      }
+    } catch (error) {
+      console.error("Failed to fetch Spotify data:", error);
+      // Set to null so NotPlaying component is shown
+      setSpotifyData(null);
+      setIsPlaying(false);
     }
   };
 
