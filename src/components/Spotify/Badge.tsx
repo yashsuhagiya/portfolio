@@ -27,7 +27,7 @@ export const SpotifyNowPlaying = () => {
     // Set interval to refresh every 10 seconds
     const intervalId = setInterval(() => {
       fetchSpotifyData();
-    }, 150000); // 150000ms = 2.5 minutes
+    }, 100000); // 100000ms = 100 seconds
 
     // Cleanup interval on component unmount
     return () => clearInterval(intervalId);

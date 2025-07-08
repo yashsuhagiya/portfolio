@@ -35,6 +35,12 @@ export default defineConfig({
     react(),
   ],
   site: "https://yashsuhagiya.com/",
+  output: "hybrid",
+  adapter: vercel({
+    webAnalytics: {
+      enabled: true,
+    },
+  }),
   experimental: {
     serverIslands: true,
     env: {
@@ -57,10 +63,4 @@ export default defineConfig({
       },
     },
   },
-  output: "hybrid",
-  adapter: vercel({
-    webAnalytics: {
-      enabled: true,
-    },
-  }),
 });
