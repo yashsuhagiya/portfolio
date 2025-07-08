@@ -18,6 +18,19 @@ export const server = {
         const client_id = SPOTIFY_CLIENT_ID;
         const client_secret = SPOTIFY_CLIENT_SECRET;
 
+        // Check if environment variables are set
+        if (!refresh_token || !client_id || !client_secret) {
+          console.error("Missing Spotify environment variables:", {
+            hasRefreshToken: !!refresh_token,
+            hasClientId: !!client_id,
+            hasClientSecret: !!client_secret,
+          });
+          throw new ActionError({
+            code: "BAD_REQUEST",
+            message: "Spotify credentials not configured",
+          });
+        }
+
         const basic = Buffer.from(`${client_id}:${client_secret}`).toString(
           "base64"
         );
@@ -35,6 +48,14 @@ export const server = {
             }),
           });
 
+          if (!responseAccessToken.ok) {
+            console.error("Failed to get access token:", {
+              status: responseAccessToken.status,
+              statusText: responseAccessToken.statusText,
+            });
+            throw new Error(`Failed to get access token: ${responseAccessToken.status}`);
+          }
+
           const token = (await responseAccessToken.json()) as {
             access_token: string;
           };
@@ -47,6 +68,14 @@ export const server = {
               },
             }
           );
+
+          if (!response.ok && response.status !== 204) {
+            console.error("Failed to get currently playing track:", {
+              status: response.status,
+              statusText: response.statusText,
+            });
+            throw new Error(`Failed to get currently playing track: ${response.status}`);
+          }
 
           if (response.status === 204) {
             return {
@@ -69,7 +98,8 @@ export const server = {
           return {
             spotifyData: track,
           };
-        } catch {
+        } catch (error) {
+          console.error("Spotify API Error:", error);
           throw new ActionError({
             code: "BAD_REQUEST",
             message: "Error fetching data from Spotify",
