@@ -56,6 +56,18 @@ const access_code = process.env.ACCESS_CODE;
           placeholder="Hello, I am Jane Doe..."
           class="h-48 rounded-sm p-3 resize-none"
           required></textarea>
+
+        <!-- Cloudflare Turnstile -->
+        <div class="mt-4">
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAAALwlaabuR9cn4qn"></div>
+            <div
+                id="turnstile-error"
+                class="text-red-400 text-sm mt-1"
+                style="display: none;">
+                Please complete the verification.
+            </div>
+        </div>
+
         <button
           type="submit"
           class="flex self-center items-center gap-1 w-fit px-4 py-2 rounded-lg text-white font-semibold bg-gray-400 backdrop-blur-lg bg-opacity-10 mt-4 hover:scale-105 hover:transition-transform hover:duration-300"
@@ -71,3 +83,6 @@ const access_code = process.env.ACCESS_CODE;
     </div>
   </main>
 </Layout>
+
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer
+></script>
