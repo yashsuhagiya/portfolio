@@ -146,10 +146,17 @@ const socials = [
 ];
 
 const workExperience = [
+  
+  {
+    company: "Splinde",
+    designation: "Full Stack Product Engineer, Full-time",
+    duration: "August 2025 – Present",
+    link: "https://www.splinde.io/",
+  },
   {
     company: "SmartNanotubes Technologies",
     designation: "Junior Software Engineer, Part-time",
-    duration: "April 2025 – Present",
+    duration: "April 2025 – August 2025",
     link: "https://smart-nanotubes.com/",
   },
   {
@@ -188,7 +195,7 @@ const education = [
   {
     university: "Technische Universität Dresden",
     degree: "M.Sc. in Distributed Systems Engineering",
-    duration: "Oct 2021 – Present",
+    duration: "Oct 2021 – March 2025",
     link: "https://tu-dresden.de/",
   },
   {
