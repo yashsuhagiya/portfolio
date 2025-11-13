@@ -5,7 +5,7 @@ An attempt to create a miniminal js personal blog using [Astro](https://astro.bu
 ## 📚 Stack
 
 - Platform: [Astro](https://astro.build/)
-- Deployment: [GitHub Pages](https://pages.github.com/)
+- Deployment: [Vercel](https://vercel.com/)
 - Package manager: [pnpm](https://pnpm.io/)
 - CSS: [Tailwind CSS](https://tailwindcss.com/)
 
