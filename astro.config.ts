@@ -8,6 +8,10 @@ import prefetch from "@astrojs/prefetch";
 
 import react from "@astrojs/react";
 
+// Check if we're building for Vercel or GitHub Pages
+// Vercel sets VERCEL=1, GitHub Actions won't have this
+const isVercel = process.env.VERCEL === "1" || process.env.DEPLOY_TARGET === "vercel";
+
 // https://astro.build/config
 export default defineConfig({
   markdown: {
@@ -35,32 +39,36 @@ export default defineConfig({
     react(),
   ],
   site: "https://yashsuhagiya.com/",
-  output: "hybrid",
-  adapter: vercel({
-    webAnalytics: {
-      enabled: true,
-    },
-  }),
-  experimental: {
-    serverIslands: true,
-    env: {
-      schema: {
-        SPOTIFY_CLIENT_ID: envField.string({
-          context: "server",
-          access: "secret",
-          default: "",
-        }),
-        SPOTIFY_CLIENT_SECRET: envField.string({
-          context: "server",
-          access: "secret",
-          default: "",
-        }),
-        SPOTIFY_REFRESH_TOKEN: envField.string({
-          context: "server",
-          access: "secret",
-          default: "",
-        }),
+  output: isVercel ? "hybrid" : "static",
+  adapter: isVercel
+    ? vercel({
+        webAnalytics: {
+          enabled: true,
+        },
+      })
+    : undefined,
+  ...(isVercel && {
+    experimental: {
+      serverIslands: true,
+      env: {
+        schema: {
+          SPOTIFY_CLIENT_ID: envField.string({
+            context: "server",
+            access: "secret",
+            default: "",
+          }),
+          SPOTIFY_CLIENT_SECRET: envField.string({
+            context: "server",
+            access: "secret",
+            default: "",
+          }),
+          SPOTIFY_REFRESH_TOKEN: envField.string({
+            context: "server",
+            access: "secret",
+            default: "",
+          }),
+        },
       },
     },
-  },
+  }),
 });
