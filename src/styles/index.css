@@ -96,3 +96,94 @@ pre {
   background-size: 300% 300%;
   animation: gradientShift 5s ease-in-out infinite;
 }
+
+@keyframes spinSlow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hero-avatar {
+  @apply relative flex items-center justify-center;
+}
+
+.hero-avatar::before,
+.hero-avatar::after {
+  content: "";
+  position: absolute;
+  inset: -12px;
+  border-radius: 9999px;
+  background: conic-gradient(
+    from 180deg,
+    #5471b6 0deg,
+    #48cfc4 140deg,
+    #5471b6 280deg,
+    #48cfc4 360deg
+  );
+  opacity: 0.8;
+  filter: drop-shadow(0 0 20px rgba(72, 207, 196, 0.3));
+  animation: spinSlow 18s linear infinite;
+}
+
+.hero-avatar::after {
+  inset: -22px;
+  opacity: 0.5;
+  animation-duration: 26s;
+  animation-direction: reverse;
+}
+
+.hero-avatar__img {
+  position: relative;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  border-radius: 9999px;
+  border: 3px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+}
+
+.role-badge {
+  position: absolute;
+  z-index: 20;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+  animation: badgeBounce 3.8s ease-in-out infinite;
+  opacity: 0.92;
+  will-change: transform;
+}
+
+.role-badge--primary {
+  top: -6%;
+  left: -10%;
+  background: linear-gradient(135deg, rgba(84, 113, 182, 0.9), rgba(68, 91, 149, 0.8));
+  color: #eaf1ff;
+  transform: rotate(-6deg);
+  animation-delay: 0.25s;
+}
+
+.role-badge--accent {
+  bottom: -2%;
+  right: -18%;
+  background: linear-gradient(135deg, rgba(72, 207, 196, 0.9), rgba(52, 163, 153, 0.8));
+  color: #032725;
+  transform: rotate(7deg);
+  animation-delay: 0.6s;
+}
+
+@keyframes badgeBounce {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-6px) scale(1.02);
+  }
+}
