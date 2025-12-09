@@ -150,7 +150,7 @@ const workExperience = [
   {
     company: "Splinde",
     designation: "Full Stack Product Engineer, Full-time",
-    duration: "August 2025 – Present",
+    duration: "August 2025 – November 2025",
     link: "https://www.splinde.io/",
   },
   {
